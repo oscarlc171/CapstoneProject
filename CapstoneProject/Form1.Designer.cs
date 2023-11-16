@@ -35,8 +35,11 @@
             this.addTaskButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.viewAllButton = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,7 +64,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listBox1);
-            this.groupBox2.Location = new System.Drawing.Point(32, 184);
+            this.groupBox2.Location = new System.Drawing.Point(32, 329);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(519, 140);
             this.groupBox2.TabIndex = 1;
@@ -88,7 +91,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(411, 330);
+            this.clearButton.Location = new System.Drawing.Point(417, 475);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(134, 23);
             this.clearButton.TabIndex = 3;
@@ -104,11 +107,31 @@
             this.viewAllButton.Text = "View All";
             this.viewAllButton.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.listBox2);
+            this.groupBox3.Location = new System.Drawing.Point(32, 184);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(519, 139);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Past Due";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(6, 22);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(507, 109);
+            this.listBox2.TabIndex = 0;
+            // 
             // TaskTrackerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 450);
+            this.ClientSize = new System.Drawing.Size(591, 526);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.viewAllButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.addTaskButton);
@@ -118,6 +141,7 @@
             this.Text = "Task Tracker";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -131,5 +155,7 @@
         private Button addTaskButton;
         private Button clearButton;
         private Button viewAllButton;
+        private GroupBox groupBox3;
+        private ListBox listBox2;
     }
 }
