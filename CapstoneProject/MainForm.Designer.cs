@@ -88,6 +88,7 @@
             this.addTaskButton.TabIndex = 2;
             this.addTaskButton.Text = "Add Task";
             this.addTaskButton.UseVisualStyleBackColor = true;
+            this.addTaskButton.Click += new System.EventHandler(this.addTaskButton_Click);
             // 
             // clearButton
             // 
@@ -106,6 +107,7 @@
             this.viewAllButton.TabIndex = 4;
             this.viewAllButton.Text = "View All";
             this.viewAllButton.UseVisualStyleBackColor = true;
+            this.viewAllButton.Click += new System.EventHandler(this.viewAllButton_Click);
             // 
             // groupBox3
             // 

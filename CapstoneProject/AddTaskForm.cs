@@ -16,5 +16,15 @@ namespace CapstoneProject
         {
             InitializeComponent();
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void addTaskButton3_Click(object sender, EventArgs e)
+        {
+            var sql = "INSERT INTO Tasks (Name, Description, DueDate, DateCreated) VALUES ('School Assignment', 'Science project for Mrs. Jones class', '2024-01-23', GETDATE());";
+        }
     }
 }

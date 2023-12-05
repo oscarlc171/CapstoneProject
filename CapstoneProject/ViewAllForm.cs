@@ -16,5 +16,15 @@ namespace CapstoneProject
         {
             InitializeComponent();
         }
+
+        private void addTaskButton2_Click(object sender, EventArgs e)
+        {
+            new AddTaskForm().ShowDialog();
+        }
+
+        private void ViewAllForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

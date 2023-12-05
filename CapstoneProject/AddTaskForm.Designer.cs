@@ -34,6 +34,8 @@
             this.selectDateLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.addTaskButton3 = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dueDateCalendar
@@ -84,11 +86,33 @@
             this.textBox2.Size = new System.Drawing.Size(227, 73);
             this.textBox2.TabIndex = 5;
             // 
+            // addTaskButton3
+            // 
+            this.addTaskButton3.Location = new System.Drawing.Point(245, 300);
+            this.addTaskButton3.Name = "addTaskButton3";
+            this.addTaskButton3.Size = new System.Drawing.Size(75, 23);
+            this.addTaskButton3.TabIndex = 6;
+            this.addTaskButton3.Text = "Add";
+            this.addTaskButton3.UseVisualStyleBackColor = true;
+            this.addTaskButton3.Click += new System.EventHandler(this.addTaskButton3_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(164, 300);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 7;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
             // AddTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 313);
+            this.ClientSize = new System.Drawing.Size(338, 335);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.addTaskButton3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.selectDateLabel);
@@ -96,7 +120,7 @@
             this.Controls.Add(this.taskNameLabel);
             this.Controls.Add(this.dueDateCalendar);
             this.Name = "AddTaskForm";
-            this.Text = "AddTaskForm";
+            this.Text = "Add Task";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +134,7 @@
         private Label selectDateLabel;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Button addTaskButton3;
+        private Button cancelButton;
     }
 }
