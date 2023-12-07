@@ -32,8 +32,8 @@
             this.taskNameLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.selectDateLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.taskNameTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.addTaskButton3 = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -41,7 +41,10 @@
             // dueDateCalendar
             // 
             this.dueDateCalendar.Location = new System.Drawing.Point(93, 133);
+            this.dueDateCalendar.MaxSelectionCount = 1;
             this.dueDateCalendar.Name = "dueDateCalendar";
+            this.dueDateCalendar.ShowToday = false;
+            this.dueDateCalendar.ShowTodayCircle = false;
             this.dueDateCalendar.TabIndex = 0;
             // 
             // taskNameLabel
@@ -71,20 +74,20 @@
             this.selectDateLabel.TabIndex = 3;
             this.selectDateLabel.Text = "Select\r\nDue Date";
             // 
-            // textBox1
+            // taskNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 23);
-            this.textBox1.TabIndex = 4;
+            this.taskNameTextBox.Location = new System.Drawing.Point(93, 15);
+            this.taskNameTextBox.Name = "taskNameTextBox";
+            this.taskNameTextBox.Size = new System.Drawing.Size(227, 23);
+            this.taskNameTextBox.TabIndex = 4;
             // 
-            // textBox2
+            // descriptionTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 48);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 73);
-            this.textBox2.TabIndex = 5;
+            this.descriptionTextBox.Location = new System.Drawing.Point(93, 48);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(227, 73);
+            this.descriptionTextBox.TabIndex = 5;
             // 
             // addTaskButton3
             // 
@@ -113,8 +116,8 @@
             this.ClientSize = new System.Drawing.Size(338, 335);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addTaskButton3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(this.taskNameTextBox);
             this.Controls.Add(this.selectDateLabel);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.taskNameLabel);
@@ -132,8 +135,8 @@
         private Label taskNameLabel;
         private Label descriptionLabel;
         private Label selectDateLabel;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox taskNameTextBox;
+        private TextBox descriptionTextBox;
         private Button addTaskButton3;
         private Button cancelButton;
     }

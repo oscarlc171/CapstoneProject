@@ -1,3 +1,8 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace CapstoneProject
 {
     public static class Program
@@ -10,8 +15,9 @@ namespace CapstoneProject
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            DatabaseConnectionFactory conn = new DatabaseConnectionFactory();
             ApplicationConfiguration.Initialize();
-            Application.Run(new TaskTrackerForm());
+            Application.Run(new TaskTrackerForm(conn));
         }
     }
 }

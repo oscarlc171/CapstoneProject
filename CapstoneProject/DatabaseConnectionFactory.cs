@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CapstoneProject
 {
-    public class SQLConnection
+    public class DatabaseConnectionFactory
     {
         public static string CnnVal(string name)
         {
@@ -18,16 +18,21 @@ namespace CapstoneProject
 
         private readonly string connectionString = "Data Source = (localdb)\\MSSQLLocalDB;Initial Catalog = CapstoneProjectDB";
 
+        private IDbConnection conn;
+
         public IDbConnection GetConnection
         {
             get
             {
-                DbProviderFactories.RegisterFactory("System.Data.SqlClient", System.Data.SqlClient.SqlClientFactory.Instance);
-                var factory = DbProviderFactories.GetFactory("System.Data.SqlClient");
-                var conn = factory.CreateConnection();
-                conn.ConnectionString = connectionString;
-                //conn.Open();
-                return conn;
+                if (conn == null)
+                {
+                    DbProviderFactories.RegisterFactory("System.Data.SqlClient", System.Data.SqlClient.SqlClientFactory.Instance);
+                    var factory = DbProviderFactories.GetFactory("System.Data.SqlClient");
+                    conn = factory.CreateConnection();
+                    conn.ConnectionString = connectionString;
+                    //conn.Open();
+                }
+                    return conn;
             }
         }
     }
