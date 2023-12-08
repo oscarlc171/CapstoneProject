@@ -24,14 +24,14 @@ namespace CapstoneProject
         {
             get
             {
-                if (conn == null)
-                {
+                //if (conn == null)
+                //{
                     DbProviderFactories.RegisterFactory("System.Data.SqlClient", System.Data.SqlClient.SqlClientFactory.Instance);
                     var factory = DbProviderFactories.GetFactory("System.Data.SqlClient");
                     conn = factory.CreateConnection();
                     conn.ConnectionString = connectionString;
                     //conn.Open();
-                }
+                //}
                     return conn;
             }
         }

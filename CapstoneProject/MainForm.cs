@@ -9,14 +9,17 @@ namespace CapstoneProject
             InitializeComponent();
         }
 
+
         private void addTaskButton_Click(object sender, EventArgs e)
         {
-            new AddTaskForm(connectionFactory).ShowDialog();
+            AddTaskForm addtaskform = new AddTaskForm(connectionFactory);
+            addtaskform.ShowDialog();
         }
 
         private void viewAllButton_Click(object sender, EventArgs e)
         {
-            new ViewAllForm().ShowDialog();
+            ViewAllForm viewallform = new ViewAllForm(connectionFactory);
+            viewallform.ShowDialog();
         }
     }
 }

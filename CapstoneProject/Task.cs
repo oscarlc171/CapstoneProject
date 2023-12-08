@@ -17,7 +17,7 @@ namespace CapstoneProject
 
         public override string ToString()
         {
-            return $"{Name} {Description} Due Date: {DueDate}";
+            return $"{Name}  |  {Description, -5}   |   {DueDate.ToString("D")}";
         }
     }
 
